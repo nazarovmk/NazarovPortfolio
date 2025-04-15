@@ -8,18 +8,18 @@ const About = () => {
   useAos();
 
   return (
-    <div className="bg-gray-600 md:rounded-xl md:m-7 flex-1 p-5 min-h-screen overflow-x-hidden">
-      {/* Added overflow-x-hidden to prevent horizontal scroll */}
+    <div className="md:rounded-xl bg-gray-600 md:m-7 flex-1 p-5">
       <Navbar />
 
-      <div data-aos="fade-up" data-aos-duration="500" className="mt-6">
-        <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
-          About Me
-        </h2>
-        <hr className="border-3 text-yellow-500 w-12 rounded-4xl" />
+      <div className="mt-7">
+        <div data-aos="fade-up" data-aos-duration="500">
+          <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+            About Me
+          </h2>
+          <hr className="border-3 text-yellow-500 w-12 rounded-4xl" />
+        </div>
       </div>
 
-      {/* Mobile mode: Image container with fixed height */}
       <div className="mt-5 md:hidden" data-aos="zoom-in">
         <img
           src={avatar}

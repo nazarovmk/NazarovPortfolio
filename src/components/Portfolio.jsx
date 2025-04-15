@@ -34,12 +34,9 @@ const Portfolio = () => {
             className="w-full px-3 py-2 border-2 border-gray-300 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-700"
           >
             <option value="All">All</option>
-            {/* <option value="SCSS">SCSS</option> */}
             <option value="CSS">CSS</option>
             <option value="HTML">HTML</option>
             <option value="Responsive Design">Responsive Design</option>
-            {/* <option value="Tailwind CSS">Tailwind CSS</option> */}
-            {/* <option value="Typescript">Typescript</option> */}
             <option value="JavaScript">JavaScript</option>
             <option value="React">React</option>
           </select>
