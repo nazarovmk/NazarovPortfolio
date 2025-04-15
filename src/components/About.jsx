@@ -8,7 +8,8 @@ const About = () => {
   useAos();
 
   return (
-    <div className="bg-gray-600 md:rounded-xl md:m-7 flex-1 p-5 min-h-screen">
+    <div className="bg-gray-600 md:rounded-xl md:m-7 flex-1 p-5 min-h-screen overflow-x-hidden">
+      {/* Added overflow-x-hidden to prevent horizontal scroll */}
       <Navbar />
 
       <div data-aos="fade-up" data-aos-duration="500" className="mt-6">
@@ -18,47 +19,51 @@ const About = () => {
         <hr className="border-3 text-yellow-500 w-12 rounded-4xl" />
       </div>
 
-      {/* Mobile mode: Rasm pastga scrollda chiqishi uchun parentga overflow bermang */}
+      {/* Mobile mode: Image container with fixed height */}
       <div className="mt-5 md:hidden" data-aos="zoom-in">
         <img
           src={avatar}
           alt="Avatar"
-          className="bg-gray-700 rounded-2xl w-full h-[400px] object-cover max-w-full"
+          className="bg-gray-700 rounded-2xl w-full h-auto max-h-[400px] object-cover"
+          // Changed to h-auto with max-height constraint
         />
       </div>
 
-      <p
-        className="mt-4 text-gray-300 text-xl font-semibold break-words"
-        data-aos="fade-left"
-        data-aos-duration="1000"
-      >
-        Hello! I'm Muhammadnazar Nazarov, a young and ambitious Frontend
-        Developer constantly striving for self-improvement. Despite being only
-        17 years old, I have over 8 months of experience in web development and
-        enjoy creating functional, interactive, and visually appealing web
-        applications using modern technologies.
-      </p>
+      <div className="space-y-4 mt-4">
+        {/* Wrapped text sections in a container with controlled spacing */}
+        <p
+          className="text-gray-300 text-xl font-semibold break-words"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          Hello! I'm Muhammadnazar Nazarov, a young and ambitious Frontend
+          Developer constantly striving for self-improvement. Despite being only
+          17 years old, I have over 8 months of experience in web development
+          and enjoy creating functional, interactive, and visually appealing web
+          applications using modern technologies.
+        </p>
 
-      <div
-        className="mt-4 text-gray-300 text-xl font-semibold space-y-3 break-words"
-        data-aos="fade-right"
-        data-aos-duration="1000"
-      >
-        {[
-          "Fast and High-Quality Work – I understand client needs and aim to create a flawless product.",
-          "Responsible and a Team Player – I enjoy participating in new projects and solving challenges.",
-        ].map((text, index) => (
-          <span key={index} className="flex items-center gap-2">
-            <GiCheckMark className="text-green-600" />
-            {text}
+        <div
+          className="text-gray-300 text-xl font-semibold space-y-3 break-words"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          {[
+            "Fast and High-Quality Work – I understand client needs and aim to create a flawless product.",
+            "Responsible and a Team Player – I enjoy participating in new projects and solving challenges.",
+          ].map((text, index) => (
+            <span key={index} className="flex items-center gap-2">
+              <GiCheckMark className="text-green-600" />
+              {text}
+            </span>
+          ))}
+          <span className="block mt-4">
+            Currently, I'm looking for a Frontend Developer position to gain
+            real-world experience and contribute my skills to impactful
+            projects. If you need a creative, energetic, and responsible
+            developer, I'm ready to help!
           </span>
-        ))}
-        <span className="block mt-4">
-          Currently, I'm looking for a Frontend Developer position to gain
-          real-world experience and contribute my skills to impactful projects.
-          If you need a creative, energetic, and responsible developer, I’m
-          ready to help!
-        </span>
+        </div>
       </div>
 
       <h2 className="text-2xl text-white font-bold mt-7" data-aos="fade-right">
@@ -78,7 +83,10 @@ const About = () => {
             data-aos-duration="500"
             data-aos-delay="100"
           >
-            <div className="text-6xl text-yellow-500">{item.logo}</div>
+            <div className="text-6xl text-yellow-500 min-w-[60px]">
+              {/* Added min-width to prevent icon shrinking */}
+              {item.logo}
+            </div>
             <div>
               <h2 className="font-bold text-2xl">{item.title}</h2>
               <p className="text-xl text-gray-300 break-words">{item.desc}</p>
