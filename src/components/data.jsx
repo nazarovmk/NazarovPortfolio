@@ -7,8 +7,8 @@ import {
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { TbBrandRedux } from "react-icons/tb";
-import { SiDaisyui } from "react-icons/si";
+import { TbBrandNextjs, TbBrandRedux } from "react-icons/tb";
+import { SiDaisyui, SiMui } from "react-icons/si";
 import { MdDevices } from "react-icons/md";
 import Digital from "../assets/Asoschilar-club.png";
 import Dondonziki from "../assets/don-don-ziki.jpg";
@@ -47,6 +47,16 @@ export const service = [
     title: "Typescript",
     desc: "TypeScript – a powerful version of JavaScript: it makes your code more precise, reliable, and scalable for large projects",
     logo: <BiLogoTypescript />,
+  },
+  {
+    title: "Next Js",
+    desc: "Next.js – a powerful React framework: it makes your apps faster, SEO-friendly, and production-ready",
+    logo: <TbBrandNextjs />,
+  },
+  {
+    title: "MUI",
+    desc: "MUI – a robust React UI library: it helps you build sleek, responsive, and accessible interfaces faster.",
+    logo: <SiMui />,
   },
   {
     title: "Scss",

@@ -47,7 +47,9 @@ const Contact = () => {
       <Navbar />
       <div className="mt-7 overflow-x-hidden">
         <div data-aos="fade-up" data-aos-duration="500">
-          <h2 className="text-white font-bold text-2xl mb-2">Contact Me</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+            Contact Me
+          </h2>
           <hr className="border-3 text-yellow-500 w-12 rounded-4xl" />
         </div>
         <div className="mt-10" data-aos="zoom-in">
@@ -106,6 +108,9 @@ const Contact = () => {
                   isValid={(value) => {
                     const cleanedValue = value.replace(/\D/g, "");
                     return cleanedValue.length >= 10;
+                  }}
+                  style={{
+                    color: phone ? "black" : "black",
                   }}
                 />
               </div>

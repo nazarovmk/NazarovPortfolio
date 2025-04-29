@@ -9,7 +9,6 @@ const Portfolio = () => {
   useAos();
   const [filter, setFilter] = useState("All");
 
-  // Filtrlash logikasi
   const filteredProjects =
     filter === "All"
       ? projects
@@ -21,7 +20,9 @@ const Portfolio = () => {
 
       <div className="mt-7">
         <div data-aos="fade-up" className="mb-5">
-          <h2 className="text-white font-bold text-2xl mb-2">Portfolio</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+            Portfolio
+          </h2>
           <hr className="border-3 border-yellow-500 w-12 rounded-4xl" />
         </div>
 
@@ -31,7 +32,7 @@ const Portfolio = () => {
             id="type"
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
-            className="w-full px-3 py-2 border-2 border-gray-300 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-700"
+            className="w-full px-3 py-2 pr-[48px] border-2 border-gray-300 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-700 font-public-sans font-normal text-sm leading-[150%] appearance-none bg-[url('./assets/icon-caret-down.svg')] bg-no-repeat bg-[right_16px_center] cursor-pointer"
           >
             <option value="All">All</option>
             <option value="CSS">CSS</option>

@@ -1,6 +1,7 @@
 import useAos from "../hooks/Aos";
 import {
   FaGithub,
+  FaLinkedin,
   FaMapMarkedAlt,
   FaRegCalendarAlt,
   FaRegEnvelope,
@@ -18,7 +19,7 @@ const Sidebar = () => {
         <div className="rounded-xl p-3 flex items-center justify-center">
           <img
             src={avatar}
-            alt=""
+            alt="avatar"
             className="w-[200px] h-[200px] bg-gray-700 rounded-2xl object-cover"
             data-aos="flip-left"
             data-aos-anchor-placement="top-bottom"
@@ -49,6 +50,7 @@ const Sidebar = () => {
               icon: <FaRegEnvelope className="text-yellow-500 text-2xl" />,
               title: "EMAIL",
               value: "nazarovvweb@gmail.com",
+              link: "mailto:nazarovvweb@gmail.com",
               aos: "zoom-in",
             },
             {
@@ -57,6 +59,14 @@ const Sidebar = () => {
               ),
               title: "PHONE",
               value: "+998 90-777-28-23",
+              link: "tel:+998907772823",
+              aos: "zoom-in",
+            },
+            {
+              icon: <FaLinkedin className="text-yellow-500 text-2xl" />,
+              title: "Linkedin",
+              value: "Muhammadnazar Nazarov",
+              link: "https://www.linkedin.com/in/muhammadnazarnazarov",
               aos: "zoom-in",
             },
             {
@@ -101,6 +111,7 @@ const Sidebar = () => {
                   <a
                     href={item.link}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-200 hover:text-yellow-400 transition"
                     data-aos="fade-up"
                     data-aos-anchor-placement="top-bottom"

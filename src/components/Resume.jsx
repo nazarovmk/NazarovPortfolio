@@ -9,7 +9,8 @@ const Resume = () => {
   }, []);
 
   const skills = [
-    "React.js",
+    "React Js",
+    "Next Js",
     "Tailwind CSS",
     "JavaScript (ES6+)",
     "HTML5 & CSS3",
@@ -19,6 +20,7 @@ const Resume = () => {
     "Rest API",
     "Postman",
     "DaisyUI",
+    "MUI",
   ];
 
   const languages = [

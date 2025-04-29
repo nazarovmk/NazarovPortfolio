@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import {
   FaGithub,
+  FaLinkedin,
   FaMapMarkedAlt,
   FaRegCalendarAlt,
   FaRegEnvelope,
@@ -19,11 +20,23 @@ const navLinks = [
 ];
 
 const contactInfo = [
-  { icon: <FaRegEnvelope />, title: "EMAIL", value: "nazarovvweb@gmail.com" },
+  {
+    icon: <FaRegEnvelope />,
+    title: "EMAIL",
+    value: "nazarovvweb@gmail.com",
+    link: "mailto:nazarovvweb@gmail.com",
+  },
   {
     icon: <MdOutlinePhoneIphone />,
     title: "PHONE",
     value: "+998 90-777-28-23",
+    link: "tel:+998907772823",
+  },
+  {
+    icon: <FaLinkedin />,
+    title: "Linkedin",
+    value: "Muhammadnazar Nazarov",
+    link: "https://www.linkedin.com/in/muhammadnazarnazarov",
   },
   {
     icon: <FaGithub />,
@@ -119,7 +132,14 @@ const ResponsiveMenu = ({ open, setOpen }) => {
               </div>
               <div className="text-white">
                 <h1 className="font-semibold">{title}</h1>
-                {link ? (
+                {link && (title === "EMAIL" || title === "PHONE") ? (
+                  <a
+                    href={link}
+                    className="text-gray-200 hover:text-yellow-400 transition"
+                  >
+                    {value}
+                  </a>
+                ) : link ? (
                   <a
                     href={link}
                     target="_blank"
