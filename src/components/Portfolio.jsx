@@ -20,7 +20,7 @@ const Portfolio = () => {
 
       <div className="mt-7">
         <div data-aos="fade-up" className="mb-5">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+          <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
             Portfolio
           </h2>
           <hr className="border-3 border-yellow-500 w-12 rounded-4xl" />
