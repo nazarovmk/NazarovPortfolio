@@ -14,37 +14,37 @@ const Sidebar = () => {
   useAos();
 
   return (
-    <div className="bg-gray-600 h-screen w-[350px] rounded-xl m-7 hidden md:block">
-      <div className="bg-gray-600 rounded-md p-4">
-        <div className="rounded-xl p-3 flex items-center justify-center">
+    <div className="bg-gray-600 h-[100vh] w-[21.875rem] rounded-xl m-[1.75rem] hidden md:block">
+      <div className="bg-gray-600 rounded-md p-[1rem]">
+        <div className="rounded-xl p-[0.75rem] flex items-center justify-center">
           <img
             src={avatar}
             alt="avatar"
-            className="w-[200px] h-[200px] bg-gray-700 rounded-2xl object-cover"
+            className="w-[12.5rem] h-[12.5rem] bg-gray-700 rounded-2xl object-cover"
             data-aos="flip-left"
             data-aos-anchor-placement="top-bottom"
           />
         </div>
         <h1
-          className="text-white font-bold text-center text-3xl my-2"
+          className="text-white font-bold text-center text-3xl my-[0.5rem]"
           data-aos="zoom-in"
           data-aos-anchor-placement="top-bottom"
         >
           Muhammadnazar Nazarov
         </h1>
         <p
-          className="text-white bg-gray-700 rounded-md py-2 text-center mx-4 mb-7"
+          className="text-white bg-gray-700 rounded-md py-[0.5rem] text-center mx-[1rem] mb-[1.75rem]"
           data-aos="fade-up"
           data-aos-anchor-placement="top-bottom"
         >
           Frontend Developer
         </p>
         <hr
-          className="text-gray-700 mx-4 border-2"
+          className="text-gray-700 mx-[1rem] border-2"
           data-aos="fade-up"
           data-aos-anchor-placement="top-bottom"
         />
-        <div className="mt-7 px-4 space-y-7">
+        <div className="mt-[1.75rem] px-[1rem] space-y-[1.75rem]">
           {[
             {
               icon: <FaRegEnvelope className="text-yellow-500 text-2xl" />,
@@ -98,11 +98,11 @@ const Sidebar = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className="flex gap-3 items-center"
+              className="flex gap-[0.75rem] items-center"
               data-aos={item.aos || "fade-right"}
               data-aos-anchor-placement="top-bottom"
             >
-              <div className="bg-gray-700 p-2 rounded-md shadow">
+              <div className="bg-gray-700 p-[0.5rem] rounded-md shadow">
                 {item.icon}
               </div>
               <div className="text-white">

@@ -44,36 +44,36 @@ const Resume = () => {
   ];
 
   return (
-    <div className="md:rounded-xl bg-gray-600 md:m-7 flex-1 p-5">
+    <div className="md:rounded-xl bg-gray-600 md:m-[1.75rem] flex-1 p-[1.25rem]">
       <Navbar />
-      <div className="mt-6 md:mt-8 text-white flex-1">
+      <div className="mt-[1.5rem] md:mt-[2rem] text-white flex-1">
         <div data-aos="fade-up" data-aos-duration="1000">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+          <h2 className="text-white text-[1.5rem] sm:text-[1.875rem] md:text-[2.25rem] font-bold mb-[0.5rem]">
             Resume
           </h2>
-          <hr className="border-2 sm:border-4 border-yellow-500 w-10 sm:w-12 md:w-16 rounded-full mb-6 md:mb-8" />
+          <hr className="border-[0.125rem] sm:border-[0.25rem] border-yellow-500 w-[2.5rem] sm:w-[3rem] md:w-[4rem] rounded-full mb-[1.5rem] md:mb-[2rem]" />
         </div>
 
-        <div className="min-h-[calc(100vh-12rem)] w-full rounded-2xl bg-white shadow-xl overflow-hidden flex flex-col">
+        <div className="min-h-[calc(100vh-12rem)] w-full rounded-[1rem] bg-white shadow-xl overflow-hidden flex flex-col">
           {/* Header */}
           <div
-            className="bg-gradient-to-r from-teal-500 to-cyan-600 p-8 text-white relative"
+            className="bg-gradient-to-r from-teal-500 to-cyan-600 p-[2rem] text-white relative"
             data-aos="flip-down"
             data-aos-duration="1200"
           >
             <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')]"></div>
             <div className="relative z-10 text-center">
-              <h1 className="text-4xl md:text-5xl font-extrabold drop-shadow-md">
+              <h1 className="text-[2.5rem] md:text-[3.125rem] font-extrabold drop-shadow-md">
                 Muhammadnazar Nazarov
               </h1>
               <p
-                className="text-lg mt-2 font-light tracking-wider"
+                className="text-[1.125rem] mt-[0.5rem] font-light tracking-wider"
                 data-aos="zoom-in"
               >
                 Frontend Developer
               </p>
               <div
-                className="mt-4 flex flex-wrap justify-center gap-4 text-sm"
+                className="mt-[1rem] flex flex-wrap justify-center gap-[1rem] text-[0.875rem]"
                 data-aos="fade-up"
                 data-aos-delay="300"
               >
@@ -102,9 +102,9 @@ const Resume = () => {
           </div>
 
           {/* Main Content */}
-          <div className="p-6 md:p-10 grid grid-cols-1 md:grid-cols-3 gap-6 flex-1 overflow-y-auto">
+          <div className="p-[1.5rem] md:p-[2.5rem] grid grid-cols-1 md:grid-cols-3 gap-[1.5rem] flex-1 overflow-y-auto">
             {/* Left Column - Skills & Education */}
-            <div className="space-y-8 md:col-span-1">
+            <div className="space-y-[2rem] md:col-span-1">
               <Section
                 title="Skills"
                 data={skills}
@@ -120,7 +120,7 @@ const Resume = () => {
                   <p key={index} className="text-gray-700">
                     <span className="font-medium text-gray-800">
                       {lang.name}:
-                    </span>{" "}
+                    </span>
                     {lang.level}
                   </p>
                 ))}
@@ -128,7 +128,7 @@ const Resume = () => {
             </div>
 
             {/* Right Column - Summary & Experience */}
-            <div className="md:col-span-2 space-y-8">
+            <div className="md:col-span-2 space-y-[2rem]">
               <Section title="Summary" aosEffect="fade-left">
                 <p className="text-gray-600 leading-relaxed">
                   I am a 17-year-old talented and dedicated Frontend Developer
@@ -145,11 +145,13 @@ const Resume = () => {
               <Section title="Work Experience" aosEffect="fade-left">
                 {workExperience.map((job, index) => (
                   <div key={index} data-aos="fade-left" data-aos-delay="300">
-                    <h3 className="text-lg font-medium text-gray-700">
+                    <h3 className="text-[1.125rem] font-medium text-gray-700">
                       {job.title}
                     </h3>
-                    <p className="text-sm text-gray-500">{job.period}</p>
-                    <ul className="mt-2 text-gray-600 text-sm list-disc list-inside">
+                    <p className="text-[0.875rem] text-gray-500">
+                      {job.period}
+                    </p>
+                    <ul className="mt-[0.5rem] text-gray-600 text-[0.875rem] list-disc list-inside">
                       {job.responsibilities.map((task, idx) => (
                         <li
                           key={idx}
@@ -171,18 +173,17 @@ const Resume = () => {
   );
 };
 
-// Reusable Section Component
 const Section = ({ title, children, data, type, aosEffect }) => (
   <div data-aos={aosEffect} data-aos-duration="900">
-    <h2 className="text-xl font-semibold text-gray-800 border-b-2 border-teal-500 pb-1">
+    <h2 className="text-[1.25rem] font-semibold text-gray-800 border-b-[0.125rem] border-teal-500 pb-[0.25rem]">
       {title}
     </h2>
-    <div className="mt-3 text-gray-600 text-sm">
+    <div className="mt-[0.75rem] text-gray-600 text-[0.875rem]">
       {type === "list" ? (
-        <ul className="space-y-2">
+        <ul className="space-y-[0.5rem]">
           {data.map((item, index) => (
             <li key={index} className="flex items-center">
-              <span className="w-2 h-2 bg-teal-500 rounded-full mr-2"></span>
+              <span className="w-[0.5rem] h-[0.5rem] bg-teal-500 rounded-full mr-[0.5rem]"></span>
               {item}
             </li>
           ))}

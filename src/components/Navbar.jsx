@@ -21,7 +21,7 @@ const Navbar = () => {
     <div className="md:bg-transparent bg-gray-800 rounded-2xl">
       {/* Desktop Navbar */}
       <nav className="hidden md:block">
-        <ul className="flex gap-10 items-center justify-end text-white text-2xl font-semibold">
+        <ul className="flex gap-[2.5rem] items-center justify-end text-white text-[1.5rem] font-semibold">
           {navLinks.map(({ path, label }, index) => (
             <NavLink
               key={index}
@@ -39,20 +39,22 @@ const Navbar = () => {
               </li>
             </NavLink>
           ))}
-          {/* <CustomSelect /> */}
         </ul>
       </nav>
 
-      {/* Mobile Navbar */}
-      <div className="flex justify-between items-center text-xl md:hidden px-5">
+      <div className="flex justify-between items-center text-[1.25rem] md:hidden px-[1.25rem]">
         <NavLink to="/">
-          <img src={Logo} alt="Logo" className="w-20 rounded-xl p-1" />
+          <img
+            src={Logo}
+            alt="Logo"
+            className="w-[5rem] rounded-xl p-[0.25rem]"
+          />
         </NavLink>
         <button onClick={() => setOpen(!open)}>
           {open ? (
-            <HiMenuAlt3 className="text-yellow-500 w-10 h-10" />
+            <HiMenuAlt3 className="text-yellow-500 w-[2.5rem] h-[2.5rem]" />
           ) : (
-            <HiMenuAlt1 className="text-yellow-500 w-10 h-10" />
+            <HiMenuAlt1 className="text-yellow-500 w-[2.5rem] h-[2.5rem]" />
           )}
         </button>
       </div>

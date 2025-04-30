@@ -76,32 +76,32 @@ const ResponsiveMenu = ({ open, setOpen }) => {
 
   return (
     <div
-      className={`fixed bottom-0 top-0 z-20 flex h-screen w-[80%] flex-col justify-between bg-gray-950 px-2 pb-4 pt-4 text-black md:hidden rounded-r-xl shadow-md transition-all ${
+      className={`fixed bottom-0 top-0 z-20 flex h-screen w-[80%] flex-col justify-between bg-gray-950 px-[0.5rem] pb-[1rem] pt-[1rem] text-black md:hidden rounded-r-xl shadow-md transition-all ${
         open ? "left-0" : "left-[100%]"
       }`}
     >
-      <div className="bg-gray-600 rounded-md p-2 overflow-auto custom-scrollbar">
+      <div className="bg-gray-600 rounded-md p-[0.5rem] overflow-auto custom-scrollbar">
         <div
-          className="rounded-xl p-3 flex items-center justify-center"
+          className="rounded-xl p-[0.75rem] flex items-center justify-center"
           data-aos="flip-down"
         >
           <img
             src={avatar}
             alt="Avatar"
-            className="w-[200px] h-[200px] object-cover bg-gray-700 rounded-2xl"
+            className="w-[12.5rem] h-[12.5rem] object-cover bg-gray-700 rounded-2xl"
           />
         </div>
-        <h1 className="text-white font-bold text-center text-3xl my-2">
+        <h1 className="text-white font-bold text-center text-[1.875rem] my-[0.5rem]">
           Muhammadnazar Nazarov
         </h1>
-        <p className="text-white bg-gray-700 rounded-md py-2 text-center mx-4 mb-7">
+        <p className="text-white bg-gray-700 rounded-md py-[0.5rem] text-center mx-[1rem] mb-[1.75rem]">
           Frontend Developer
         </p>
-        <hr className="text-gray-700 mx-4 border-2" />
+        <hr className="text-gray-700 mx-[1rem] border-[2px]" />
 
-        <nav className="mt-5">
+        <nav className="mt-[1.25rem]">
           <ul
-            className="flex flex-wrap text-center gap-2 items-center justify-center text-white text-xl font-semibold"
+            className="flex flex-wrap text-center gap-[0.5rem] items-center justify-center text-white text-[1.25rem] font-semibold"
             data-aos="fade-up"
           >
             {navLinks.map(({ to, label }) => (
@@ -124,10 +124,10 @@ const ResponsiveMenu = ({ open, setOpen }) => {
           </ul>
         </nav>
 
-        <div className="mt-7 px-4 space-y-7">
+        <div className="mt-[1.75rem] px-[1rem] space-y-[1.75rem]">
           {contactInfo.map(({ icon, title, value, link }, index) => (
-            <div key={index} className="flex gap-3 items-center">
-              <div className="bg-gray-700 p-2 rounded-md shadow text-yellow-500 text-2xl">
+            <div key={index} className="flex gap-[0.75rem] items-center">
+              <div className="bg-gray-700 p-[0.5rem] rounded-md shadow text-yellow-500 text-[1.5rem]">
                 {icon}
               </div>
               <div className="text-white">
