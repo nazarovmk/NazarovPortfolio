@@ -44,7 +44,7 @@ const Resume = () => {
   ];
 
   return (
-    <div className="md:rounded-xl bg-gray-600 md:m-[1.75rem] flex-1 p-[1.25rem]">
+    <div className="rounded-none md:rounded-xl sm:rounded-xl bg-gray-600 sm:m-[1.75rem] md:m-[1.75rem] flex-1 p-[1.25rem]">
       <Navbar />
       <div className="mt-[1.5rem] md:mt-[2rem] text-white flex-1">
         <div data-aos="fade-up" data-aos-duration="1000">
