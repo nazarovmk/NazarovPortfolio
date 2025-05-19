@@ -14,7 +14,6 @@ import avatar from "../assets/nazosh.png";
 
 const navLinks = [
   { to: "/", label: "About" },
-  { to: "/resume", label: "Resume" },
   { to: "/portfolio", label: "Portfolio" },
   { to: "/contact", label: "Contact" },
 ];
@@ -74,6 +73,10 @@ const ResponsiveMenu = ({ open, setOpen }) => {
     });
   }, []);
 
+  const handleOpen = () => {
+    window.open("/MuhammadnazarNazarovResume.pdf", "_blank");
+  };
+
   return (
     <div
       className={`fixed bottom-0 top-0 z-20 flex h-screen w-[80%] flex-col justify-between bg-gray-950 px-[0.5rem] pb-[1rem] pt-[1rem] text-black md:hidden rounded-r-xl shadow-md transition-all ${
@@ -121,6 +124,15 @@ const ResponsiveMenu = ({ open, setOpen }) => {
                 </li>
               </NavLink>
             ))}
+
+            <li>
+              <button
+                onClick={handleOpen}
+                className="w-full bg-teal-600 text-white px-4 py-2 rounded cursor-pointer"
+              >
+                Rezume PDF ni ochish
+              </button>
+            </li>
           </ul>
         </nav>
 

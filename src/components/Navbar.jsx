@@ -4,11 +4,9 @@ import { useState } from "react";
 import { HiMenuAlt1, HiMenuAlt3 } from "react-icons/hi";
 import ResponsiveMenu from "./ResponsiveMenu";
 import useAos from "../hooks/Aos";
-import CustomSelect from "./CustomSelect";
 
 const navLinks = [
   { path: "/", label: "About" },
-  { path: "/resume", label: "Resume" },
   { path: "/portfolio", label: "Portfolio" },
   { path: "/contact", label: "Contact" },
 ];
@@ -16,6 +14,10 @@ const navLinks = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   useAos();
+
+  const handleOpen = () => {
+    window.open("/MuhammadnazarNazarovResume.pdf", "_blank");
+  };
 
   return (
     <div className="md:bg-transparent bg-gray-800 rounded-2xl">
@@ -39,6 +41,15 @@ const Navbar = () => {
               </li>
             </NavLink>
           ))}
+
+          <li>
+            <button
+              onClick={handleOpen}
+              className="w-full bg-teal-600 text-white px-4 py-2 rounded cursor-pointer"
+            >
+              Rezume PDF ni ochish
+            </button>
+          </li>
         </ul>
       </nav>
 
