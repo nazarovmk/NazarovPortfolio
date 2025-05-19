@@ -44,9 +44,9 @@ const Resume = () => {
   ];
 
   return (
-    <div className="rounded-none md:rounded-xl sm:rounded-xl bg-gray-600 sm:m-[1.75rem] md:m-[1.75rem] flex-1 p-[1.25rem]">
+    <div className="md:rounded-xl bg-gray-600 md:m-[1.75rem] flex-1 p-[1rem] sm:p-[1.25rem]">
       <Navbar />
-      <div className="mt-[1.5rem] md:mt-[2rem] text-white flex-1">
+      <div className="mt-[1.25rem] sm:mt-[1.5rem] text-white flex-1">
         <div data-aos="fade-up" data-aos-duration="1000">
           <h2 className="text-white text-[1.5rem] sm:text-[1.875rem] md:text-[2.25rem] font-bold mb-[0.5rem]">
             Resume
@@ -57,23 +57,23 @@ const Resume = () => {
         <div className="min-h-[calc(100vh-12rem)] w-full rounded-[1rem] bg-white shadow-xl overflow-hidden flex flex-col">
           {/* Header */}
           <div
-            className="bg-gradient-to-r from-teal-500 to-cyan-600 p-[2rem] text-white relative"
+            className="bg-gradient-to-r from-teal-500 to-cyan-600 p-[1.5rem] sm:p-[2rem] text-white relative"
             data-aos="flip-down"
             data-aos-duration="1200"
           >
             <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')]"></div>
             <div className="relative z-10 text-center">
-              <h1 className="text-[2.5rem] md:text-[3.125rem] font-extrabold drop-shadow-md">
+              <h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3.125rem] font-extrabold drop-shadow-md">
                 Muhammadnazar Nazarov
               </h1>
               <p
-                className="text-[1.125rem] mt-[0.5rem] font-light tracking-wider"
+                className="text-[1rem] sm:text-[1.125rem] mt-[0.5rem] font-light tracking-wider"
                 data-aos="zoom-in"
               >
                 Frontend Developer
               </p>
               <div
-                className="mt-[1rem] flex flex-wrap justify-center gap-[1rem] text-[0.875rem]"
+                className="mt-[1rem] flex flex-col sm:flex-row flex-wrap justify-center items-center gap-[0.5rem] sm:gap-[1rem] text-[0.875rem]"
                 data-aos="fade-up"
                 data-aos-delay="300"
               >
@@ -102,7 +102,7 @@ const Resume = () => {
           </div>
 
           {/* Main Content */}
-          <div className="p-[1.5rem] md:p-[2.5rem] grid grid-cols-1 md:grid-cols-3 gap-[1.5rem] flex-1 overflow-y-auto">
+          <div className="p-[1.25rem] sm:p-[1.5rem] md:p-[2.5rem] grid grid-cols-1 md:grid-cols-3 gap-[1.5rem] flex-1 overflow-y-auto">
             {/* Left Column - Skills & Education */}
             <div className="space-y-[2rem] md:col-span-1">
               <Section
@@ -120,7 +120,7 @@ const Resume = () => {
                   <p key={index} className="text-gray-700">
                     <span className="font-medium text-gray-800">
                       {lang.name}:
-                    </span>
+                    </span>{" "}
                     {lang.level}
                   </p>
                 ))}
@@ -175,7 +175,7 @@ const Resume = () => {
 
 const Section = ({ title, children, data, type, aosEffect }) => (
   <div data-aos={aosEffect} data-aos-duration="900">
-    <h2 className="text-[1.25rem] font-semibold text-gray-800 border-b-[0.125rem] border-teal-500 pb-[0.25rem]">
+    <h2 className="text-[1.125rem] sm:text-[1.25rem] font-semibold text-gray-800 border-b-[0.125rem] border-teal-500 pb-[0.25rem]">
       {title}
     </h2>
     <div className="mt-[0.75rem] text-gray-600 text-[0.875rem]">
