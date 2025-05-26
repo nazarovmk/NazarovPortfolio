@@ -25,7 +25,9 @@ import Random from "../assets/Random User.jpg";
 import Music from "../assets/music.jpg";
 import TechBookClub from "../assets/TechBookClub.jpg";
 import CoffeeRoasters from "../assets/CoffeeRoasters.jpg";
+import Inter from "../assets/Inter.jpg";
 import Desserts from "../assets/Desserts.jpg";
+import Invoices from "../assets/Invoices.jpg";
 import Product from "../assets/Product.jpg";
 import Form from "../assets/Login-and-Register.jpg";
 import TodoList from "../assets/TodoList.jpg";
@@ -117,6 +119,15 @@ export const projects = [
     image: Digital,
   },
   {
+    title: "Inter-AI",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea accusantium impedit facere. Sequi, deserunt recusandae.",
+    techStack: ["Vue", "TaypeScript", "Tailwind CSS", "Responsive Design"],
+    link: "https://interai-chi.vercel.app/",
+    github: "https://github.com/nazarovmk/interai",
+    image: Inter,
+  },
+  {
     title: "Desserts",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea accusantium impedit facere. Sequi, deserunt recusandae.",
@@ -130,6 +141,21 @@ export const projects = [
     link: "https://desserts-lyart.vercel.app/",
     github: "https://github.com/nazarovmk/desserts",
     image: Desserts,
+  },
+  {
+    title: "Invoices",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea accusantium impedit facere. Sequi, deserunt recusandae.",
+    techStack: [
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "Zustand",
+      "Responsive Design",
+    ],
+    link: "https://invoices-exam-weld.vercel.app/",
+    github: "https://github.com/nazarovmk/InvoicesExam",
+    image: Invoices,
   },
   {
     title: "Product",
