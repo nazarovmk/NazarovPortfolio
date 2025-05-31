@@ -119,15 +119,6 @@ export const projects = [
     image: Digital,
   },
   {
-    title: "Inter-AI",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea accusantium impedit facere. Sequi, deserunt recusandae.",
-    techStack: ["Vue", "TaypeScript", "Tailwind CSS", "Responsive Design"],
-    link: "https://interai-chi.vercel.app/",
-    github: "https://github.com/nazarovmk/interai",
-    image: Inter,
-  },
-  {
     title: "Desserts",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea accusantium impedit facere. Sequi, deserunt recusandae.",
