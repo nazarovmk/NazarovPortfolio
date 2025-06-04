@@ -20,11 +20,14 @@ const About = () => {
         </div>
       </div>
 
-      <div className="mt-[1.25rem] md:hidden" data-aos="zoom-in">
+      <div
+        className="mt-[1.25rem] flex justify-center md:hidden"
+        data-aos="zoom-in"
+      >
         <img
           src={avatar}
           alt="Avatar"
-          className="bg-gray-700 rounded-[1rem] w-full h-auto max-h-[25rem] object-cover"
+          className="bg-gray-700 rounded-[1rem] w-[70%] h-[300px] max-h-[25rem] object-cover"
         />
       </div>
 

@@ -11,6 +11,7 @@ import { TbBrandNextjs, TbBrandRedux } from "react-icons/tb";
 import { SiDaisyui, SiMui } from "react-icons/si";
 import { MdDevices } from "react-icons/md";
 import Digital from "../assets/Asoschilar-club.png";
+import InterAI from "../assets/Inter.jpg";
 import Dondonziki from "../assets/don-don-ziki.jpg";
 import Myteam from "../assets/MyTeam.png";
 import Weather from "../assets/Weather.jpg";
@@ -33,6 +34,8 @@ import Form from "../assets/Login-and-Register.jpg";
 import TodoList from "../assets/TodoList.jpg";
 import { BsFiletypeScss } from "react-icons/bs";
 import { BiLogoTypescript } from "react-icons/bi";
+import { LiaOsi } from "react-icons/lia";
+import { AiOutlineTranslation } from "react-icons/ai";
 
 export const service = [
   {
@@ -105,6 +108,16 @@ export const service = [
     desc: "Adaptive and user-friendly layouts for all screen sizes",
     logo: <MdDevices />,
   },
+  {
+    title: "AOS",
+    desc: "Adaptive scroll animations for any screen",
+    logo: <LiaOsi />,
+  },
+  {
+    title: "I18n",
+    desc: "Seamless multilingual support for global users",
+    logo: <AiOutlineTranslation />,
+  },
 ];
 
 export const projects = [
@@ -117,6 +130,15 @@ export const projects = [
     github:
       "https://github.com/nazarovmk/This-is-my-first-project.-Asoschilar-Club",
     image: Digital,
+  },
+  {
+    title: "Inter AI",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea accusantium impedit facere. Sequi, deserunt recusandae.",
+    techStack: ["Vue", "Nuxt", "TypeScript", "Telwindcss", "Responsive Design"],
+    link: "https://inter-ai-tau.vercel.app/",
+    github: "https://github.com/nazarovmk/InterAI",
+    image: InterAI,
   },
   {
     title: "Desserts",

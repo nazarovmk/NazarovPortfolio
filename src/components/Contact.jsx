@@ -9,35 +9,51 @@ import Loader from "./Loader";
 
 const Contact = () => {
   const [phone, setPhone] = useState("");
-  const scriptURL =
-    "https://script.google.com/macros/s/AKfycbzSESP9dIwmvELBpz59HsVpoXVh2gU1lpJFxLvkju34fBjJX1-HHPxBiLtJvp9hQQej/exec";
-
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setMessage("");
 
     const formData = new FormData(e.target);
-    formData.append("number", phone);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const messageText = formData.get("message");
+    const number = phone;
+
+    const text = `
+<b>📬 Yangi xabar!</b>\n
+👤 <b>Ism:</b> ${name}
+📧 <b>Email:</b> ${email}
+📱 <b>Telefon:</b> ${number}
+📝 <b>Xabar:</b> ${messageText}
+  `;
+
+    const telegramURL = `https://api.telegram.org/bot7642865277:AAFz8O_EQ8Bsj1kISrSHq8oiVlunZwn5O50/sendMessage`;
 
     try {
-      const response = await fetch(scriptURL, {
+      const response = await fetch(telegramURL, {
         method: "POST",
-        body: formData,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          chat_id: "6637083815",
+          text,
+          parse_mode: "HTML",
+        }),
       });
 
       if (response.ok) {
-        toast.success("Message sent successfully");
+        toast.success("Message sent to Telegram successfully!");
         e.target.reset();
         setPhone("");
       } else {
-        toast.error("Failed to send message. Try again.");
+        toast.error("Failed to send message to Telegram.");
       }
     } catch (error) {
-      toast.error("Error occurred! Please try again.");
+      toast.error("Error occurred while sending to Telegram.");
     } finally {
       setLoading(false);
     }
