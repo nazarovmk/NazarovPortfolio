@@ -3,6 +3,7 @@ import About from "./components/About";
 import Sidebar from "./components/Sidebar";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
+import { Analytics } from "@vercel/analytics/react"; // e'tibor bering: /next emas, /react
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,10 @@ const App = () => {
   return (
     <div className="flex">
       <Sidebar />
-      <RouterProvider router={router} />
+      <div className="flex-1">
+        <RouterProvider router={router} />
+      </div>
+      <Analytics />
     </div>
   );
 };
